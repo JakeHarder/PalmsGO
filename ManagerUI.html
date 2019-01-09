@@ -1,0 +1,3372 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Manager UI</title>
+      <link rel="shortcut icon" href="Includes/images/palmsgoIcon.png""/><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <style type="text/css">
+         .card-image {
+            width: 150px;
+         }
+      </style>
+   </head>
+<body>
+<form method="post" action="./ManagerUI.aspx" id="form1">
+<header>
+</header>
+<div>
+<div>
+<div>
+<table cellspacing="0" cellpadding="4" id="Content_FoodGrid" style="color:#333333;border-style:None;width:1297px;border-collapse:collapse;">
+<tr style="color:White;background-color:#1C5E55;font-weight:bold;">
+<th scope="col">&nbsp;</th>
+<th scope="col">Name</th>
+<th scope="col">Food Type</th>
+<th scope="col">Description</th>
+<th scope="col">Cost</th>
+<th scope="col">Deliverable</th>
+<th scope="col">Photo</th>
+<th scope="col">Operation</th>
+</tr>
+<tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl02$hidId" id="Content_FoodGrid_hidId_0" value="91" />
+</td>
+<td>
+<span id="Content_FoodGrid_lblName_0">Apple Pie Bites</span>
+</td>
+<td>
+<select name="ctl00$Content$FoodGrid$ctl02$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_0" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_0">Delicious pie filling encased in a buttery, flaky crust. Served with caramel dipping sauce.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_0">3.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_0">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Appetizers/App_AppleBites.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl02$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl02$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_0" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl02$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl02$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_0" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl03$hidId" id="Content_FoodGrid_hidId_1" value="15" />
+</td><td>
+<span id="Content_FoodGrid_lblName_1">Apple or Orange Juice</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl03$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_1" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option selected="selected" value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_1">15.2 oz</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_1">1.59</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_1">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_AppleAndOrangeJuice.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl03$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl03$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_1" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl03$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl03$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_1" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl04$hidId" id="Content_FoodGrid_hidId_2" value="114" />
+</td><td>
+<span id="Content_FoodGrid_lblName_2">BBQ Chicken and Bacon</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl04$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_2" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_2">BBQ sauce topped with all-white chicken, bacon, and onions.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_2">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_2">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_BBQChickenBacon.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl04$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl04$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_2" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl04$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl04$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_2" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl05$hidId" id="Content_FoodGrid_hidId_3" value="21" />
+</td><td>
+<span id="Content_FoodGrid_lblName_3">Bacon Burger</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl05$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_3" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option selected="selected" value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_3">1/3 Pound of beef and bacon smothered in American cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_3">7.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_3">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Burger_BaconSingle.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl05$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl05$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_3" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl05$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl05$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_3" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl06$hidId" id="Content_FoodGrid_hidId_4" value="1" />
+</td><td>
+<span id="Content_FoodGrid_lblName_4">Bagel</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl06$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_4" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option selected="selected" value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_4">Bacon or Sausage</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_4">2.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_4">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_BECBagel.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl06$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl06$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_4" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl06$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl06$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_4" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl07$hidId" id="Content_FoodGrid_hidId_5" value="17" />
+</td><td>
+<span id="Content_FoodGrid_lblName_5">Bottled Water</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl07$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_5" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option selected="selected" value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_5">Distilled water</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_5">1.60</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_5">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_BottledWater.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl07$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl07$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_5" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl07$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl07$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_5" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl08$hidId" id="Content_FoodGrid_hidId_6" value="34" />
+</td><td>
+<span id="Content_FoodGrid_lblName_6">Broccoli Cheddar Soup</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl08$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_6" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option selected="selected" value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_6">Cheese melted into a warm bowl of broccoli soup</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_6">1.89</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_6">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Soup_CheddarBroccoli.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl08$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl08$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_6" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl08$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl08$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_6" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl09$hidId" id="Content_FoodGrid_hidId_7" value="103" />
+</td><td>
+<span id="Content_FoodGrid_lblName_7">Brownie</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl09$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_7" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_7">Ice cream with a hot brownie fudge</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_7">3.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_7">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/Sundaes_Brownie.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl09$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl09$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_7" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl09$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl09$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_7" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl10$hidId" id="Content_FoodGrid_hidId_8" value="111" />
+</td><td>
+<span id="Content_FoodGrid_lblName_8">Buffalo Chicken</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl10$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_8" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_8">Ranch sauce, all-white chicken, bacon, onions, mozzarella, a tangy, spicy buffalo sauce.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_8">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_8">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_BuffaloChickenPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl10$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl10$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_8" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl10$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl10$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_8" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl11$hidId" id="Content_FoodGrid_hidId_9" value="84" />
+</td><td>
+<span id="Content_FoodGrid_lblName_9">Buffalo Chicken</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl11$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_9" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option selected="selected" value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_9">Grilled chicken tossed in spicy buffalo sauce, with celery and bleu cheese sauce, in a garden vegetable tortilla.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_9">6.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_9">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Wrap_BuffaloChicken.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl11$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl11$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_9" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl11$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl11$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_9" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl12$hidId" id="Content_FoodGrid_hidId_10" value="104" />
+</td><td>
+<span id="Content_FoodGrid_lblName_10">Cheese</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl12$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_10" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option selected="selected" value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_10">Signature Mozerella Cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_10">9.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_10">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_CheesePizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl12$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl12$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_10" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl12$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl12$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_10" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl13$hidId" id="Content_FoodGrid_hidId_11" value="18" />
+</td><td>
+<span id="Content_FoodGrid_lblName_11">Cheeseburger</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl13$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_11" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option selected="selected" value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_11">1/3 Pound of beef smothered in American cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_11">6.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_11">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Burger_Single.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl13$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl13$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_11" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl13$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl13$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_11" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl14$hidId" id="Content_FoodGrid_hidId_12" value="123" />
+</td><td>
+<span id="Content_FoodGrid_lblName_12">Cheesesticks (12)</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl14$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_12" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option selected="selected" value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_12">Fresh original dough topped with our special garlic sauce and real cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_12">4.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_12">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_Cheesesticks.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl14$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl14$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_12" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl14$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl14$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_12" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl15$hidId" id="Content_FoodGrid_hidId_13" value="116" />
+</td><td>
+<span id="Content_FoodGrid_lblName_13">Cheesy Chicken Cordon Bleu</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl15$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_13" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_13">Spinach alfredo sauce, all-white chicken, ham, and mozzarella, Asiago, provolone, and fontina cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_13">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_13">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_ChickenCordonBleuPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl15$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl15$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_13" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl15$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl15$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_13" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl16$hidId" id="Content_FoodGrid_hidId_14" value="94" />
+</td><td>
+<span id="Content_FoodGrid_lblName_14">Cheesy Jalapeno Bites</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl16$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_14" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_14">Jalapenos encased in a fried crust</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_14">3.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_14">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Appetizers/App_CheesyAppleBites.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl16$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl16$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_14" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl16$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl16$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_14" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl17$hidId" id="Content_FoodGrid_hidId_15" value="82" />
+</td><td>
+<span id="Content_FoodGrid_lblName_15">Chicken Bacon Ranch</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl17$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_15" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option selected="selected" value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_15">Season cuts of grilled chicken breast, somked bacon, and zesty ranch mayo in a garden vegetable tortilla.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_15">6.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_15">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Wrap_ChickenBacon.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl17$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl17$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_15" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl17$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl17$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_15" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl18$hidId" id="Content_FoodGrid_hidId_16" value="55" />
+</td><td>
+<span id="Content_FoodGrid_lblName_16">Chicken Bacon Ranch</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl18$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_16" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_16">Season grilled chicken breast, bacon, and zesty ranch mayo spread on wheatberry.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_16">5.79</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_16">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_ChickenBacon.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl18$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl18$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_16" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl18$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl18$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_16" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl19$hidId" id="Content_FoodGrid_hidId_17" value="66" />
+</td><td>
+<span id="Content_FoodGrid_lblName_17">Chicken Bacon Ranch</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl19$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_17" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option selected="selected" value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_17">Grilled chicken, Havarti cheese, hickory bacon, and ranch mayo on toasted wheatberry.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_17">5.79</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_17">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Panini_ChickenBaconRanch.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl19$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl19$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_17" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl19$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl19$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_17" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl20$hidId" id="Content_FoodGrid_hidId_18" value="35" />
+</td><td>
+<span id="Content_FoodGrid_lblName_18">Chicken Noodle Soup</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl20$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_18" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option selected="selected" value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_18">Chicken broth filled with chicken, noodles, soup, and seasoning</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_18">1.89</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_18">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Soup_ChickenNoodle.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl20$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl20$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_18" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl20$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl20$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_18" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl21$hidId" id="Content_FoodGrid_hidId_19" value="36" />
+</td><td>
+<span id="Content_FoodGrid_lblName_19">Chicken and Wild Rice</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl21$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_19" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option selected="selected" value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_19">Healthy and delicious</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_19">1.89</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_19">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Soup_ChickenWildRice.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl21$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl21$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_19" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl21$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl21$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_19" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl22$hidId" id="Content_FoodGrid_hidId_20" value="68" />
+</td><td>
+<span id="Content_FoodGrid_lblName_20">Chipotle Turkey</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl22$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_20" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option selected="selected" value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_20">Mesquite-somked turkey, Gouda cheese, hickory bacon, and chipotle mayo on toasted marble rye.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_20">6.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_20">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Panini_ChipotleTurkey.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl22$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl22$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_20" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl22$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl22$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_20" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl23$hidId" id="Content_FoodGrid_hidId_21" value="26" />
+</td><td>
+<span id="Content_FoodGrid_lblName_21">Chips</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl23$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_21" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_21">Classic original crunchy chips</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_21">1.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_21">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/ChipsAndFruit.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl23$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl23$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_21" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl23$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl23$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_21" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl24$hidId" id="Content_FoodGrid_hidId_22" value="10" />
+</td><td>
+<span id="Content_FoodGrid_lblName_22">Cinnamon Roll</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl24$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_22" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option selected="selected" value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_22">Served warm with sweet rich icing</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_22">2.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_22">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_CinnamonRoll.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl24$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl24$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_22" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl24$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl24$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_22" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl25$hidId" id="Content_FoodGrid_hidId_23" value="57" />
+</td><td>
+<span id="Content_FoodGrid_lblName_23">Classic BLT</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl25$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_23" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_23">Hickory smoked bacon, lettuce, mayo, and thick tomato slices on wheatberry</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_23">5.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_23">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_BLT.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl25$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl25$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_23" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl25$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl25$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_23" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl26$hidId" id="Content_FoodGrid_hidId_24" value="12" />
+</td><td>
+<span id="Content_FoodGrid_lblName_24">Coffee</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl26$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_24" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option selected="selected" value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_24">Regular * Decaf</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_24">1.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_24">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_Coffee.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl26$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl26$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_24" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl26$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl26$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_24" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl27$hidId" id="Content_FoodGrid_hidId_25" value="130" />
+</td><td>
+<span id="Content_FoodGrid_lblName_25">Create Your Own</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl27$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_25" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option selected="selected" value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_25"></span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_25">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_25">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_TheWorksPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl27$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl27$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_25" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl27$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl27$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_25" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl28$hidId" id="Content_FoodGrid_hidId_26" value="5" />
+</td><td>
+<span id="Content_FoodGrid_lblName_26">Croissant</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl28$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_26" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option selected="selected" value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_26">Bacon or Sausage</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_26">2.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_26">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_SECCroissant.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl28$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl28$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_26" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl28$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl28$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_26" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl29$hidId" id="Content_FoodGrid_hidId_27" value="63" />
+</td><td>
+<span id="Content_FoodGrid_lblName_27">Cuban</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl29$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_27" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_27">Smoked Pork and Cuban ham with dill pickles, Swiss cheese, mayonnaise, and mustard.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_27">6.09</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_27">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/SandwichCuban.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl29$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl29$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_27" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl29$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl29$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_27" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl30$hidId" id="Content_FoodGrid_hidId_28" value="126" />
+</td><td>
+<span id="Content_FoodGrid_lblName_28">Dipping Sauce</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl30$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_28" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option selected="selected" value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_28">Flavors served are Spicy Buffalo, Honey Chipotle, Special Garlic, Pizza, Ranch, Blue Cheese, or Cheese Sauce</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_28">0.69</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_28">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/dipping_sauce.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl30$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl30$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_28" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl30$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl30$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_28" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl31$hidId" id="Content_FoodGrid_hidId_29" value="22" />
+</td><td>
+<span id="Content_FoodGrid_lblName_29">Double Bacon Burger</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl31$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_29" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option selected="selected" value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_29">2/3 Pound of beef smothered in American cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_29">9.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_29">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Burger_BaconDouble.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl31$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl31$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_29" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl31$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl31$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_29" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl32$hidId" id="Content_FoodGrid_hidId_30" value="119" />
+</td><td>
+<span id="Content_FoodGrid_lblName_30">Double Bacon Six Cheese</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl32$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_30" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_30">Bacon, Canadion bacon, mozzarella, Parmesan, Romano, Asiago, provolone, and fontina cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_30">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_30">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_DoubleBaconSixCheesePizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl32$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl32$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_30" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl32$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl32$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_30" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl33$hidId" id="Content_FoodGrid_hidId_31" value="19" />
+</td><td>
+<span id="Content_FoodGrid_lblName_31">Double Cheeseburger</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl33$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_31" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option selected="selected" value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_31">2/3 Pound of beef smothered in American cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_31">8.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_31">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Burger_Double.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl33$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl33$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_31" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl33$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl33$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_31" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl34$hidId" id="Content_FoodGrid_hidId_32" value="128" />
+</td><td>
+<span id="Content_FoodGrid_lblName_32">Double Chocolate Chip Brownie</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl34$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_32" disabled="disabled" class="aspNetDisabled">
+<option selected="selected" value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_32">Filled with rich chocolate chips, baked fresh, then cut into 8 slices. Served warm and ready to eat</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_32">4.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_32">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/brownies.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl34$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl34$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_32" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl34$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl34$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_32" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl35$hidId" id="Content_FoodGrid_hidId_33" value="98" />
+</td><td>
+<span id="Content_FoodGrid_lblName_33">Double Dish</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl35$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_33" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_33">Chocolate, cookie dough, mint chocolate chip, strawberry, or vanilla</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_33">3.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_33">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/IceCream_DoubleDish.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl35$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl35$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_33" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl35$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl35$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_33" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl36$hidId" id="Content_FoodGrid_hidId_34" value="96" />
+</td><td>
+<span id="Content_FoodGrid_lblName_34">Double Waffle</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl36$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_34" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_34">Chocolate, cookie dough, mint chocolate chip, strawberry, or vanilla</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_34">3.39</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_34">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/IceCream_DoubleWaffle.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl36$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl36$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_34" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl36$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl36$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_34" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl37$hidId" id="Content_FoodGrid_hidId_35" value="4" />
+</td><td>
+<span id="Content_FoodGrid_lblName_35">English Muffin</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl37$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_35" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option selected="selected" value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_35">Bacon or Sausage</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_35">2.79</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_35">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_BECEnglishMuffin.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl37$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl37$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_35" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl37$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl37$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_35" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl38$hidId" id="Content_FoodGrid_hidId_36" value="76" />
+</td><td>
+<span id="Content_FoodGrid_lblName_36">Fiesta Chicken</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl38$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_36" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option selected="selected" value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_36">Seasoned chicken with mozzarella cheddar, and Montery Jack cheese, and chipotle sauce.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_36">5.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_36">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/QuesadillaFiesta.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl38$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl38$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_36" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl38$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl38$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_36" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl39$hidId" id="Content_FoodGrid_hidId_37" value="2" />
+</td><td>
+<span id="Content_FoodGrid_lblName_37">Flatbread</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl39$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_37" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option selected="selected" value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_37">Bacon or Sausage</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_37">2.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_37">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_BECFlatbread.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl39$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl39$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_37" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl39$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl39$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_37" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl40$hidId" id="Content_FoodGrid_hidId_38" value="13" />
+</td><td>
+<span id="Content_FoodGrid_lblName_38">Fountain Drink or Brewed Tea</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl40$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_38" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option selected="selected" value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_38">Tea served sweet or unsweet</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_38">2.09</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_38">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_FountainDrink.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl40$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl40$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_38" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl40$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl40$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_38" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl41$hidId" id="Content_FoodGrid_hidId_39" value="62" />
+</td><td>
+<span id="Content_FoodGrid_lblName_39">French Dip</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl41$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_39" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_39">Grilled roast beef au jus.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_39">6.09</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_39">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_FrenchDip.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl41$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl41$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_39" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl41$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl41$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_39" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl42$hidId" id="Content_FoodGrid_hidId_40" value="25" />
+</td><td>
+<span id="Content_FoodGrid_lblName_40">French Fries</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl42$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_40" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_40">Served hot</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_40">3.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_40">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Side_Fries.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl42$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl42$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_40" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl42$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl42$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_40" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl43$hidId" id="Content_FoodGrid_hidId_41" value="8" />
+</td><td>
+<span id="Content_FoodGrid_lblName_41">French Toast Sticks</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl43$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_41" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option selected="selected" value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_41">Bite-sized pieces of French toast served with maple syrup.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_41">1.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_41">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_FrenchToastSticks.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl43$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl43$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_41" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl43$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl43$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_41" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl44$hidId" id="Content_FoodGrid_hidId_42" value="90" />
+</td><td>
+<span id="Content_FoodGrid_lblName_42">Funnel Cake Fries</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl44$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_42" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_42">Powder sugar on cake fries</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_42">3.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_42">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Appetizers/funnel_cake_fries.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl44$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl44$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_42" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl44$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl44$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_42" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl45$hidId" id="Content_FoodGrid_hidId_43" value="109" />
+</td><td>
+<span id="Content_FoodGrid_lblName_43">Garden Fresh</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl45$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_43" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_43">Baby portabello mushrooms, black olives fresh sliced onions, green peppers and Roma tomatoes.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_43">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_43">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/garden_fresh.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl45$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl45$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_43" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl45$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl45$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_43" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl46$hidId" id="Content_FoodGrid_hidId_44" value="122" />
+</td><td>
+<span id="Content_FoodGrid_lblName_44">Garlic Parmesan Breadsticks (4)</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl46$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_44" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option selected="selected" value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_44">Fresh original dough topped with our special garlic sauce and Parmesan Italian Seasoning.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_44">2.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_44">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_GarlicParmBreadsticks.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl46$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl46$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_44" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl46$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl46$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_44" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl47$hidId" id="Content_FoodGrid_hidId_45" value="117" />
+</td><td>
+<span id="Content_FoodGrid_lblName_45">Grilled Chicken Club</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl47$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_45" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_45">All-white chicken, hickery-smoked bacon, onions, and Roma tomatoes.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_45">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_45">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_GrilledChickenClubPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl47$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl47$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_45" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl47$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl47$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_45" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl48$hidId" id="Content_FoodGrid_hidId_46" value="9" />
+</td><td>
+<span id="Content_FoodGrid_lblName_46">Hash Browns</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl48$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_46" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option selected="selected" value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_46">Crispy potatoes browned to a golden perfection.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_46">1.59</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_46">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_HashBrowns.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl48$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl48$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_46" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl48$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl48$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_46" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl49$hidId" id="Content_FoodGrid_hidId_47" value="49" />
+</td><td>
+<span id="Content_FoodGrid_lblName_47">Havarti Roast Beef</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl49$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_47" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_47">Top round roast beef, Havarti cheese, and zesty chipotle mayo on Italian ciabatta</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_47">7.09</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_47">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_RoastBeef.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl49$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl49$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_47" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl49$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl49$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_47" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl50$hidId" id="Content_FoodGrid_hidId_48" value="115" />
+</td><td>
+<span id="Content_FoodGrid_lblName_48">Hawaiian BBQ Chicken</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl50$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_48" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_48">BBQ sauce topped with chicken, bacon, onions, and pineapple.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_48">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_48">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_HawiianBBQPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl50$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl50$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_48" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl50$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl50$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_48" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl51$hidId" id="Content_FoodGrid_hidId_49" value="110" />
+</td><td>
+<span id="Content_FoodGrid_lblName_49">John's Favorite</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl51$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_49" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_49">Peperoni, Sausage, a six-cheese blend, and Italian seasoning.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_49">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_49">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_JohnsFavoritePizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl51$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl51$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_49" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl51$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl51$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_49" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl52$hidId" id="Content_FoodGrid_hidId_50" value="92" />
+</td><td>
+<span id="Content_FoodGrid_lblName_50">Macaroni and Cheese Bites</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl52$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_50" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_50">Macaroni and cheese encased in a fried crust served warm</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_50">3.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_50">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Appetizers/App_MacaroniBites.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl52$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl52$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_50" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl52$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl52$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_50" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl53$hidId" id="Content_FoodGrid_hidId_51" value="78" />
+</td><td>
+<span id="Content_FoodGrid_lblName_51">Mediterranean Turkey</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl53$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_51" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option selected="selected" value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_51">Mesquite turkey, Gouda cheese, craisins, and sun-dried tomato mayo in a tomato basil tortilla.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_51">7.39</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_51">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Wrap_Turkey.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl53$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl53$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_51" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl53$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl53$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_51" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl54$hidId" id="Content_FoodGrid_hidId_52" value="127" />
+</td><td>
+<span id="Content_FoodGrid_lblName_52">Mega Chocolate Chip Cookie</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl54$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_52" disabled="disabled" class="aspNetDisabled">
+<option selected="selected" value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_52">Filled with rich chocolate chips, baked fresh, then cut into 8 slices. Served warm and ready to eat.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_52">4.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_52">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/cookies.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl54$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl54$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_52" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl54$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl54$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_52" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl55$hidId" id="Content_FoodGrid_hidId_53" value="51" />
+</td><td>
+<span id="Content_FoodGrid_lblName_53">Mesquite Turkey Club</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl55$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_53" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_53">Mesquite turkey, hickory bacon, and smoked ham, with honey mustard and mayo with caraway rye</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_53">6.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_53">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_MisquiteTurkeyClub.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl55$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl55$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_53" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl55$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl55$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_53" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl56$hidId" id="Content_FoodGrid_hidId_54" value="89" />
+</td><td>
+<span id="Content_FoodGrid_lblName_54">Mozerella Sticks</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl56$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_54" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_54">Melted cheese served hot</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_54">3.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_54">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Appetizers/App_CheeseSticks.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl56$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl56$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_54" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl56$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl56$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_54" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl57$hidId" id="Content_FoodGrid_hidId_55" value="23" />
+</td><td>
+<span id="Content_FoodGrid_lblName_55">Mushroom Swiss Burger</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl57$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_55" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option selected="selected" value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_55">1/3 Pound of beef covered with sauteed mushrooms and real Swiss cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_55">9.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_55">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Buger_Mushroom.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl57$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl57$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_55" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl57$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl57$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_55" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl58$hidId" id="Content_FoodGrid_hidId_56" value="102" />
+</td><td>
+<span id="Content_FoodGrid_lblName_56">Old-Fashioned Milkshake/Malt</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl58$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_56" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_56">Vanilla or Chocolate</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_56">3.25</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_56">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/Sundaes_OldFashionedMilkshakeMelt.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl58$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl58$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_56" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl58$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl58$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_56" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl59$hidId" id="Content_FoodGrid_hidId_57" value="93" />
+</td><td>
+<span id="Content_FoodGrid_lblName_57">Onion Rings</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl59$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_57" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option selected="selected" value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_57">Onion rings encased in a flaky crust</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_57">3.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_57">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Appetizers/App_OnionRings.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl59$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl59$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_57" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl59$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl59$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_57" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl60$hidId" id="Content_FoodGrid_hidId_58" value="99" />
+</td><td>
+<span id="Content_FoodGrid_lblName_58">Oreo</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl60$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_58" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_58">Ice cream sundae with an oreo influence</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_58">3.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_58">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/Sundaes_Oreo.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl60$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl60$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_58" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl60$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl60$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_58" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl61$hidId" id="Content_FoodGrid_hidId_59" value="125" />
+</td><td>
+<span id="Content_FoodGrid_lblName_59">Papa's Wings (8)</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl61$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_59" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option selected="selected" value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_59">Flavors served are Spicy Buffalo, Honey Chipotle, BBQ, Oven Roasted</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_59">5.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_59">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_OvenRoastedWings.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl61$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl61$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_59" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl61$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl61$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_59" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl62$hidId" id="Content_FoodGrid_hidId_60" value="100" />
+</td><td>
+<span id="Content_FoodGrid_lblName_60">Peanut Butter Cup</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl62$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_60" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_60">Ice cream sundae with a Peanut Butter cup influence</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_60">3.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_60">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/Sundaes_PeanutButterCup.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl62$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl62$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_60" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl62$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl62$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_60" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl63$hidId" id="Content_FoodGrid_hidId_61" value="105" />
+</td><td>
+<span id="Content_FoodGrid_lblName_61">Pepperoni</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl63$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_61" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option selected="selected" value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_61">Premium Pepperoni.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_61">9.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_61">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_PepperoniPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl63$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl63$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_61" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl63$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl63$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_61" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl64$hidId" id="Content_FoodGrid_hidId_62" value="61" />
+</td><td>
+<span id="Content_FoodGrid_lblName_62">Philly Cheesesteak</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl64$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_62" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_62">Tender ribeye steak cooked with bell peppers, onions, and smoked Gouda Cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_62">6.09</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_62">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_PhillyCheesesteak.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl64$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl64$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_62" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl64$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl64$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_62" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl65$hidId" id="Content_FoodGrid_hidId_63" value="59" />
+</td><td>
+<span id="Content_FoodGrid_lblName_63">Premium Chicken Salad</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl65$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_63" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_63">Prepared with diced chicken breast, minced carrots, and dill pickles on wheatberry.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_63">5.59</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_63">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_ChickenSalad.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl65$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl65$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_63" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl65$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl65$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_63" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl66$hidId" id="Content_FoodGrid_hidId_64" value="86" />
+</td><td>
+<span id="Content_FoodGrid_lblName_64">Premium Roast Beef</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl66$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_64" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option selected="selected" value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_64">Top round roast beef, Havarti cheese, and chipotle mayo in a garden vegetable tortilla.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_64">6.59</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_64">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Wrap_RoastBeef.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl66$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl66$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_64" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl66$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl66$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_64" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl67$hidId" id="Content_FoodGrid_hidId_65" value="6" />
+</td><td>
+<span id="Content_FoodGrid_lblName_65">Quesadilla</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl67$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_65" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option selected="selected" value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_65">Bacon or Sausage, egg, and cheese between two tortillas, served with sour cream and salsa.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_65">2.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_65">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_Quesadilla.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl67$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl67$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_65" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl67$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl67$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_65" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl68$hidId" id="Content_FoodGrid_hidId_66" value="64" />
+</td><td>
+<span id="Content_FoodGrid_lblName_66">Roast Beef</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl68$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_66" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option selected="selected" value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_66">Top round roast beef, Havarti cheese, and zesty chipotle mayo on toasted wheatberry.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_66">6.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_66">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Panini_RoastBeef.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl68$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl68$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_66" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl68$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl68$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_66" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl69$hidId" id="Content_FoodGrid_hidId_67" value="101" />
+</td><td>
+<span id="Content_FoodGrid_lblName_67">Root Beer Float</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl69$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_67" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_67">Classic root beer float</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_67">2.69</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_67">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/Sundaes_RootBeerFloat.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl69$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl69$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_67" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl69$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl69$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_67" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl70$hidId" id="Content_FoodGrid_hidId_68" value="70" />
+</td><td>
+<span id="Content_FoodGrid_lblName_68">Rueben</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl70$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_68" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option selected="selected" value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_68">Corned beef topped with kosher sauerkraut, Swiss cheese and zesty sauce on toasted rye.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_68">5.39</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_68">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Panini_Ruben.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl70$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl70$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_68" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl70$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl70$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_68" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl71$hidId" id="Content_FoodGrid_hidId_69" value="40" />
+</td><td>
+<span id="Content_FoodGrid_lblName_69">Salad</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl71$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_69" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option selected="selected" value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_69">Salad served in a cup</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_69">7.39</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_69">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Side_Salad.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl71$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl71$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_69" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl71$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl71$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_69" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl72$hidId" id="Content_FoodGrid_hidId_70" value="106" />
+</td><td>
+<span id="Content_FoodGrid_lblName_70">Sausage</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl72$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_70" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option selected="selected" value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_70">Premium Sausage.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_70">9.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_70">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_SausagePizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl72$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl72$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_70" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl72$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl72$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_70" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl73$hidId" id="Content_FoodGrid_hidId_71" value="97" />
+</td><td>
+<span id="Content_FoodGrid_lblName_71">Single Dish</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl73$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_71" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_71">Chocolate, cookie dough, mint chocolate chip, strawberry, or vanilla</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_71">2.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_71">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/IceCream_SingleDish.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl73$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl73$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_71" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl73$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl73$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_71" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl74$hidId" id="Content_FoodGrid_hidId_72" value="95" />
+</td><td>
+<span id="Content_FoodGrid_lblName_72">Single Waffle</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl74$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_72" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option selected="selected" value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_72">Chocolate, cookie dough, mint chocolate chip, strawberry, or vanilla</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_72">2.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_72">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Desserts/IceCream_SingleWaffle.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl74$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl74$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_72" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl74$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl74$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_72" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl75$hidId" id="Content_FoodGrid_hidId_73" value="47" />
+</td><td>
+<span id="Content_FoodGrid_lblName_73">Smoke House Turkey</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl75$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_73" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_73">Mesquite-smoked turkey, Gouda cheese, and sun-dried tomato mayo on focaccia</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_73">6.40</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_73">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_SmokeHouseTurkey.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl75$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl75$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_73" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl75$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl75$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_73" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl76$hidId" id="Content_FoodGrid_hidId_74" value="72" />
+</td><td>
+<span id="Content_FoodGrid_lblName_74">Smoked Ham</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl76$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_74" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option selected="selected" value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_74">Smoked ham, Havarti cheese, and spicy brown mustard on toasted rye.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_74">4.49</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_74">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Panini_SmokedHam.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl76$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl76$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_74" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl76$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl76$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_74" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl77$hidId" id="Content_FoodGrid_hidId_75" value="53" />
+</td><td>
+<span id="Content_FoodGrid_lblName_75">Smoked Ham and Cheddar</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl77$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_75" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option selected="selected" value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_75">Smoked ham and aged cheddar on marble rye with honey mustard and mayo</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_75">6.29</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_75">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Sandwich_HamandCheddar.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl77$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl77$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_75" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl77$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl77$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_75" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl78$hidId" id="Content_FoodGrid_hidId_76" value="112" />
+</td><td>
+<span id="Content_FoodGrid_lblName_76">Spicy Italian</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl78$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_76" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_76">Spinach, and a rich creamy garlic Parmasean alfredo sauce.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_76">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_76">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_SpicyItalianPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl78$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl78$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_76" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl78$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl78$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_76" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl79$hidId" id="Content_FoodGrid_hidId_77" value="113" />
+</td><td>
+<span id="Content_FoodGrid_lblName_77">Spinach Alfredo</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl79$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_77" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_77">Spinach and a rich, creamy garlic Parmesan alfredo sauce.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_77">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_77">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_SpinachAlfredoPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl79$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl79$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_77" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl79$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl79$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_77" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl80$hidId" id="Content_FoodGrid_hidId_78" value="120" />
+</td><td>
+<span id="Content_FoodGrid_lblName_78">Spinach Alfredo with Chicken and Tomato</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl80$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_78" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_78">Spinach, alfredo sauce, grilled chicken and tomato</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_78">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_78">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_SpinachAndAlfredoChickenAndTomatoPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl80$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl80$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_78" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl80$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl80$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_78" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl81$hidId" id="Content_FoodGrid_hidId_79" value="24" />
+</td><td>
+<span id="Content_FoodGrid_lblName_79">Sweet Heat BBQ Burger</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl81$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_79" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option selected="selected" value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_79">1/3 Pound of beef topped in Cheddar cheese, crispy fried onions, sweet heat BBQ sauce, and a smoky chipotle mayo.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_79">9.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_79">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Burger_Sweetheart.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl81$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl81$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_79" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl81$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl81$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_79" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl82$hidId" id="Content_FoodGrid_hidId_80" value="108" />
+</td><td>
+<span id="Content_FoodGrid_lblName_80">The Meats</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl82$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_80" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_80">Pepperoni, sausage, beef, bacon, and Canadian bacon.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_80">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_80">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_TheMeatsPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl82$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl82$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_80" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl82$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl82$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_80" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl83$hidId" id="Content_FoodGrid_hidId_81" value="107" />
+</td><td>
+<span id="Content_FoodGrid_lblName_81">The Works</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl83$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_81" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_81">Pepperoni, Canadian bacon, spicy Italian sausage, black olives, baby portabello mushrooms, fresh-sliced onions, and green peppers.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_81">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_81">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_TheWorksPizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl83$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl83$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_81" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl83$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl83$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_81" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl84$hidId" id="Content_FoodGrid_hidId_82" value="77" />
+</td><td>
+<span id="Content_FoodGrid_lblName_82">Three Cheese</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl84$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_82" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option selected="selected" value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_82">A blend of Cheddar, mozzarella, and Montery Jack Cheese</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_82">4.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_82">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/QuesadillaThreeCheese.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl84$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl84$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_82" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl84$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl84$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_82" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl85$hidId" id="Content_FoodGrid_hidId_83" value="129" />
+</td><td>
+<span id="Content_FoodGrid_lblName_83">Toasted Bagel</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl85$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_83" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option selected="selected" value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_83">Blueberry, Cinnamon, Plain, Asiago Cheese, or Everything</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_83">1.69</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_83">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_Bagel.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl85$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl85$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_83" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl85$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl85$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_83" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl86$hidId" id="Content_FoodGrid_hidId_84" value="3" />
+</td><td>
+<span id="Content_FoodGrid_lblName_84">Toaster</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl86$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_84" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option selected="selected" value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_84">Bacon or Sausage</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_84">2.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_84">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/Breakfast_SECToaster.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl86$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl86$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_84" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl86$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl86$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_84" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl87$hidId" id="Content_FoodGrid_hidId_85" value="20" />
+</td><td>
+<span id="Content_FoodGrid_lblName_85">Triple Cheeseburger</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl87$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_85" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option selected="selected" value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_85">1 Pound of beef smothered in American cheese.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_85">9.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_85">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Burger_Triple.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl87$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl87$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_85" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl87$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl87$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_85" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl88$hidId" id="Content_FoodGrid_hidId_86" value="74" />
+</td><td>
+<span id="Content_FoodGrid_lblName_86">Tuna Melt</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl88$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_86" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option selected="selected" value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_86">Fresh tuna salad with melted Swiss on toasted marble rye.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_86">4.19</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_86">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/Panini_TunaMelt.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl88$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl88$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_86" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl88$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl88$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_86" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl89$hidId" id="Content_FoodGrid_hidId_87" value="118" />
+</td><td>
+<span id="Content_FoodGrid_lblName_87">Tuscan Six Cheese</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl89$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_87" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option selected="selected" value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_87">Parmesan, Romano, Asiago, fontina, provolone, and mozzarella.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_87">11.99</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_87">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Papa Johns/PJ_SixCheesePizza.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl89$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl89$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_87" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl89$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl89$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_87" />
+</td>
+</tr><tr align="center" style="background-color:#E3EAEB;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl90$hidId" id="Content_FoodGrid_hidId_88" value="11" />
+</td><td>
+<span id="Content_FoodGrid_lblName_88">Warm Muffin</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl90$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_88" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option selected="selected" value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_88">Blueberry, Chocolate, or Orange Cranberry</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_88">1.69</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_88">N</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Breakfast/muffin.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl90$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl90$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_88" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl90$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl90$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_88" />
+</td>
+</tr><tr align="center" style="background-color:White;">
+<td>
+<input type="hidden" name="ctl00$Content$FoodGrid$ctl91$hidId" id="Content_FoodGrid_hidId_89" value="80" />
+</td><td>
+<span id="Content_FoodGrid_lblName_89">Wholesome Chicken</span>
+</td><td>
+<select name="ctl00$Content$FoodGrid$ctl91$foodTypeDDL" id="Content_FoodGrid_foodTypeDDL_89" disabled="disabled" class="aspNetDisabled">
+<option value="16">Desserts</option>
+<option value="1">Breakfast Sandwiches</option>
+<option value="2">Breakfast Sides</option>
+<option value="3">Bakery</option>
+<option value="4">Beverages</option>
+<option value="5">Burgers</option>
+<option value="7">Soups &amp; Salads</option>
+<option value="8">Sandwiches</option>
+<option value="9">Paninis</option>
+<option value="10">Quesadillas</option>
+<option selected="selected" value="11">Wraps</option>
+<option value="12">Appetizers</option>
+<option value="13">Ice Cream</option>
+<option value="14">Classic Pizzas</option>
+<option value="17">Create Your Own Pizza</option>
+<option value="18">Specialty Pizzas</option>
+<option value="15">Papa Johns Sides</option>
+</select>
+</td><td>
+<span id="Content_FoodGrid_lblDescr_89">Upscale chicken salad prepared with grilled chicken breast, minced carrots, and a pickle in a multigrain tortilla.</span>
+</td><td>
+<span id="Content_FoodGrid_lblCost_89">5.59</span>
+</td><td>
+<span id="Content_FoodGrid_lblIsDeliverable_89">Y</span>
+</td><td>
+<img class="card-image" src="Includes/images/Menu Items//Lunch Dinner/wholesome_chicken.jpg" />
+</td><td>
+<input type="button" name="ctl00$Content$FoodGrid$ctl91$btnEdit" value="Edit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl91$btnEdit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnEdit_89" />
+<input type="button" name="ctl00$Content$FoodGrid$ctl91$btnDelete" value="Delete" onclick="return confirm(&#39;Are you sure?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$FoodGrid$ctl91$btnDelete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_FoodGrid_btnDelete_89" />
+</td>
+</tr>
+</table>
+</div>
+<br />
+<input type="button" name="ctl00$Content$btnAdd" value="Add New Record" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Content$btnAdd&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="Content_btnAdd" />
+</div>
+</div>
+<footer>
+</footer>
+</form>
+</body>
+</html>

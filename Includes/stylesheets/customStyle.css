@@ -1,0 +1,162 @@
+﻿html{
+    
+}
+
+body {
+    height: 100%;
+    font-size: 22px;
+    font-family: 'Josefin Sans', sans-serif;
+    /*background-color: rgba(13,86,55, .9);*/
+}
+
+.aboveBackgroundImages {
+    position: relative;
+    z-index: 101;
+}
+
+.palmsgo_left, .palmsgo_right {
+     height: 320px;
+     width: 200px;
+     opacity: .4;
+     bottom: 0;
+     position: fixed;
+     z-index: 100;
+}
+
+.palmsgo_left {
+    left: 5px;
+}
+
+.palmsgo_right {
+    right: 5px;
+}
+
+
+
+/* Navigation bar css code starts here */
+.navbar {
+    background-color: rgba(13,86,55, .9);
+    padding: 18px 0px 18px 0;
+    margin-bottom: 0px;
+    position: relative; 
+    z-index: 5;
+}
+
+.myNavbar-center {
+    margin: 0px !important;
+    display: inline-block;
+    float: none !important;
+    width: initial !important;
+}
+
+ul.navbar .navbar-nav li {
+    display: inline-block;
+    float: none !important;
+    text-align: center;
+} 
+
+.navbar-nav {
+    margin: initial;
+}
+
+nav.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+ul.nav a {
+    font-size: 23px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(255, 255, 255) !important;
+    white-space: nowrap;
+}
+
+ul.nav a:hover {
+    color: rgba(272,120,75, .99) !important;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 32px;
+    float: none !important;
+    z-index: 10;
+}
+/* Navigation bar css code ends here */
+
+
+/* Modal code starts here */
+.modal-content {
+    background-color: sandybrown;
+}
+
+.modal-dialog {
+   max-width: 920px; 
+}
+
+.modal-header {
+    border-bottom: none;
+    color: rgba(13,86,55, .9);
+    padding-bottom: 0;
+}
+
+.modal-title {
+    font-weight: bold;
+    font-size: 40pt;
+    border-bottom: none;
+}
+/* Modal code ends here */
+
+@media (max-width: 450px)
+{
+    .modalSizing {
+        width: 100%;
+    }
+
+    .thankYou {
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 992px)
+{
+   .modalSizing {
+      width: 900px;
+   }
+}
+/* Modal code ends here */
+
+
+/* For the amount of products in the Cart */
+.badge {
+    margin-left: 5px;
+    background-color: indianred;
+    vertical-align: bottom;
+}
+
+
+@media (max-width: 767px)
+{
+    .info-card {
+        margin-left: 40px !important;
+        /*background-color: red;*/
+        width: 100%;
+    }
+}
+
+
+.thankYou {
+    background-color: sandybrown;
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 60px;
+    width: 46%;
+    height: 400px;
+    border-radius: 40px;
+    opacity: .85;
+    color: black;
+}

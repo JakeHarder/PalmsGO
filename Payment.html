@@ -1,0 +1,651 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+   <head>
+      <title>Payment</title>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="shortcut icon" href="Includes/images/palmsgoIcon.png" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="Includes/stylesheets/bootstrap.min.css" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="Includes/stylesheets/customStyle.css" />  <!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
+	    <link rel="stylesheet" type="text/css" href="Includes/stylesheets/CardStyles.css" />  <!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+    <!-- cart styles -->
+    <style type="text/css">
+        .help-tip {
+	        position: relative;
+            top: 5px;
+	        text-align: center;
+	        background-color: #048EEF;/*#BCDBEA;*/
+	        border-radius: 50%;
+	        width: 24px;
+	        height: 24px;
+	        font-size: 17px;
+	        line-height: 26px;
+	        cursor: default;
+            display: block;
+        }
+
+        .help-tip:before {
+	        content:'?';
+	        font-weight: bold;
+	        color:#fff;
+        }
+
+        .help-tip.active p {
+            z-index: 100;
+	        display:block;
+	        transform-origin: 100% 0%;
+
+	        -webkit-animation: fadeIn 0.3s ease-in-out;
+	        animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .help-tip p {	/* The tooltip */
+	        display: none;
+	        text-align: left;
+	        background-color: #1E2021;
+	        padding: 5px;
+	        width: 185px;
+	        position: absolute;
+	        border-radius: 3px;
+	        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	        right: -4px;
+	        color: #FFF;
+	        font-size: 17px;
+	        line-height: 1.4;
+        }
+
+        .help-tip.active p:before { /* The pointer of the tooltip */
+	        position: absolute;
+	        content: '';
+	        width:0;
+	        height: 0;
+	        border:6px solid transparent;
+	        border-bottom-color:#1E2021;
+	        right:10px;
+	        top:-12px;
+        }
+
+        .help-tip.active p:after { /* Prevents the tooltip from being hidden */
+	        width:100%;
+	        height:40px;
+	        content:'';
+	        position: absolute;
+	        top:-40px;
+	        left:0;
+        }
+
+        .help-tip.active p {
+            z-index: 100;
+	        display:block;
+	        transform-origin: 100% 0%;
+
+	        -webkit-animation: fadeIn 0.3s ease-in-out;
+	        animation: fadeIn 0.3s ease-in-out;
+        }
+        /* CSS animation */
+
+        @-webkit-keyframes fadeIn {
+	        0% { 
+		        opacity:0; 
+		        transform: scale(0.6);
+	        }
+
+	        100% {
+		        opacity:100%;
+		        transform: scale(1);
+	        }
+        }
+
+        @keyframes fadeIn {
+	        0% { opacity:0; }
+	        100% { opacity:1; }
+        }
+
+
+        .payment-item
+        {
+            margin-left: -100px;
+            position: relative;
+            margin-right: 5px;
+            display: inline-block;
+            float: left;
+        }
+
+        .cannot-deliver
+        {
+            border: 5px solid rgb(200, 25, 25);
+        }
+    </style>
+    <!-- order summary -->
+    <style type="text/css">
+        .order-summary
+        {
+            display: inline-block;
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .order-summary-info
+        {
+            border: 2px solid rgb(128, 128, 128);
+            border-radius: 20px;
+            display: block;
+            height: 40px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            background-color: sandybrown;
+            clear: both;
+        }
+
+        .order-summary-items
+        {
+            padding-left: 100px;
+            width: 100%;
+            height: 200px;
+            text-align: left;
+        }
+    </style>
+    <!-- payment options -->
+    <style type="text/css">
+        .payment-options
+        {
+            display: inline-block;
+           /*// width: 600px;*/
+            width: 80%
+        }
+
+        .inputLabel {
+            width: 50%;
+        }
+
+        .inputText {
+            width: 100%;
+        }
+
+        .payment-options-button-container
+        {
+            width: 100%;
+        }
+
+        .payment-options-button
+        {
+            border: 2px solid rgb(128, 128, 128);
+            padding: 10px;
+            width: 50%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .payment-options-button:hover
+        {
+            /*background-color: rgb(200, 200, 200);*/
+            background-color: darkgray;
+        }
+
+        .current-tab
+        {
+            border-width: 2px 2px 0px 2px;
+            background-color: lightgray;
+        }
+
+        .payment-options-section
+        {
+            border-width: 0px 2px 2px 2px;
+            border-style: solid;
+            border-color: rgb(128, 128, 128);
+            padding: 20px;
+            width: 100%;
+            text-align: left;
+            background-color: lightgray;
+            align-content: flex-end;
+        }
+
+        .payment-options-section table
+        {
+            width: 100%;
+        }
+
+        .payment-submit-button
+        {
+            margin: 20px 0px 30px 0px;
+            padding: 10px 30px 10px 30px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            color: black;
+            display: inline-block;
+            background-color: sandybrown;
+        }
+
+        .payment-submit-button:hover
+        {
+            border: 2px solid rgba(13,86,55, .9);
+            color: rgba(13,86,55, .9);
+            text-decoration: none;
+        }
+
+        .Error
+        {
+            color: rgb(200, 25, 25);
+        }
+
+        .bad-data
+        {
+            border: 2px solid rgb(200, 25, 25);
+        }
+    </style>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            switchToTab(1);
+
+            $('.help-tip').each(function ()
+            {
+                $(this).on('click', function ()
+                {
+                    if (!$(this).hasClass('active'))
+                    {
+                        $(this).addClass('active');
+                    }
+                });
+
+                $(this).on('mouseover', function ()
+                {
+                    $(this).addClass('active');
+                });
+
+                $(this).on('mouseout', function ()
+                {
+                    $(this).removeClass('active');
+                });
+            });
+
+            $('#lnkSubmit').on('click', function ()
+            {
+                var isValid = true;
+
+                var txtLocationPlaceCheck  = /^[0-9]{3,4}$/;
+
+                var txtFirstName           = $('#txtFirstName');
+                var txtLastName            = $('#txtLastName');
+                var ddlDeliveryType        = $('#ddlDeliveryType');
+                var ddlLocations           = $('#ddlLocations');
+                var locationPlaceContainer = $('#locationPlaceContainer');
+                var txtLocationPlace       = $('#txtLocationPlace');
+                var lblError               = $('#lblError');
+                
+                if (txtFirstName.val() != "") {
+                    txtFirstName.removeClass("bad-data");
+                }
+                else {
+                    txtFirstName.addClass("bad-data");
+                    isValid = false;
+                }
+
+                if (txtLastName.val() != "") {
+                    txtLastName.removeClass("bad-data");
+                }
+                else {
+                    txtLastName.addClass("bad-data");
+                    isValid = false;
+                }
+
+                if (!(lblError.html().includes("cannot be delivered")) && ddlDeliveryType.val() != "") {
+                    ddlDeliveryType.removeClass("bad-data");
+                }
+                else {
+                    ddlDeliveryType.addClass("bad-data");
+                    isValid = false;
+                }
+
+                if (ddlLocations.val() != "") {
+                    ddlLocations.removeClass("bad-data");
+                }
+                else {
+                    ddlLocations.addClass("bad-data");
+                    isValid = false;
+                }
+
+                if (locationPlaceContainer.is(':visible'))
+                {
+                    if (txtLocationPlaceCheck.test(txtLocationPlace.val())) {
+                        txtLocationPlace.removeClass("bad-data");
+                    }
+                    else {
+                        txtLocationPlace.addClass("bad-data");
+                        isValid = false;
+                    }
+                }
+
+                if ($('#hidPaymentType').val() == "1")//credit card
+                {
+                    var CCNumberCheck            = /^[0-9]{16,16}$/;
+                    var expirationMonthDateCheck = /^(0[1-9]|1[0-2])\/[0-9]{2,2}$/;
+                    var cardSecurityCodeCheck    = /^[0-9]{3,4}$/;
+                    var ownerNameCheck           = /^[^\\\/?^!@#$%&*+=<>;:)(}{\[\]]+$/;
+
+                    var txtCreditCardNumber       = $('#txtCreditCardNumber');
+                    var txtCreditCardExpDate      = $('#txtCreditCardExpDate');
+                    var txtCreditCardSecurityCode = $('#txtCreditCardSecurityCode');
+                    var txtCreditCardOwnerName    = $('#txtCreditCardOwnerName');
+
+                    if (CCNumberCheck.test(txtCreditCardNumber.val())) {
+                        txtCreditCardNumber.removeClass("bad-data");
+                    }
+                    else {
+                        txtCreditCardNumber.addClass("bad-data");
+                        isValid = false;
+                    }
+
+                    if (expirationMonthDateCheck.test(txtCreditCardExpDate.val())) {
+                        txtCreditCardExpDate.removeClass("bad-data");
+                    }
+                    else {
+                        txtCreditCardExpDate.addClass("bad-data");
+                        isValid = false;
+                    }
+
+                    if (cardSecurityCodeCheck.test(txtCreditCardSecurityCode.val())) {
+                        txtCreditCardSecurityCode.removeClass("bad-data");
+                    }
+                    else {
+                        txtCreditCardSecurityCode.addClass("bad-data");
+                        isValid = false;
+                    }
+
+                    if (ownerNameCheck.test(txtCreditCardOwnerName.val())) {
+                        txtCreditCardOwnerName.removeClass("bad-data");
+                    }
+                    else {
+                        txtCreditCardOwnerName.addClass("bad-data");
+                        isValid = false;
+                    }
+                }
+                else if ($('#hidPaymentType').val() == "2")//ID card
+                {
+                    var IDNumberCheck = /^[0-9]{4,6}$/;
+                    var PasswordCheck = /^[0-9]{8,8}$/;
+
+                    var txtIDNumber = $('#txtIDNumber');
+                    var txtPassword = $('#txtPassword');
+
+                    if (IDNumberCheck.test(txtIDNumber.val())) {
+                        txtIDNumber.removeClass("bad-data");
+                    }
+                    else {
+                        txtIDNumber.addClass("bad-data");
+                        isValid = false;
+                    }
+
+                    if (PasswordCheck.test(txtPassword.val())) {
+                        txtPassword.removeClass("bad-data");
+                    }
+                    else {
+                        txtPassword.addClass("bad-data");
+                        isValid = false;
+                    }
+                }
+                return isValid;// false stops postback
+            });
+
+            $("#idNumComplaint").hide();
+            $("#idPassComplaint").hide();
+        });
+
+        function switchToTab(tabToOpen)
+        {
+            $('td[Tab][Tab!="' + tabToOpen + '"]').each(function (index) {
+                $(this).removeClass("current-tab");
+            });
+
+            $('td[Tab="' + tabToOpen + '"]').first().addClass("current-tab");
+
+
+            $('div[tabSection]:visible').each(function (index) {
+                $( this ).hide();
+            });
+
+            $('div[tabSection="' + tabToOpen + '"]').first().show();
+
+            $('#hidPaymentType').val(tabToOpen);
+        }
+        function pickDeliveryType(ddl)
+				{
+            var ddl = $(ddl);
+
+            if (ddl.val() != null && ddl.val() != '')
+            {
+                ddl.children().first().hide();
+            }
+
+            if (ddl.val() == 'PickUp')
+            {
+                $('#deliveryLocationContainer').show();
+                $('#ddlLocations').val("Palm's Grille");
+                $('#ddlLocations').change();
+                $('#ddlLocations').prop( "disabled", true );
+            }
+            else if (ddl.val() == 'Delivery')
+            {
+                $('#deliveryLocationContainer').show();
+                $('#ddlLocations').children().first().show();
+                $('#ddlLocations').val("");
+                $('#ddlLocations').change();
+                $('#ddlLocations').prop( "disabled", false );
+            }
+						else {
+						    $('#deliveryLocationContainer').show();
+            }
+				}
+
+        function pickLocation(ddl)
+        {
+            var ddl = $(ddl);
+
+            if (ddl.val() != null && ddl.val() != '')
+            {
+                ddl.children().first().hide();
+            }
+
+            if (ddl.val() == 'DR' || ddl.val() == 'WA')
+            {
+                $('#locationPlaceContainer').show();
+                $('#txtLocationPlace').val('');
+
+
+                if (ddl.val() == 'DR')
+                {
+                    $('#lbllocationPlace').html('Room Number');
+                }
+                else
+                {
+                    $('#lbllocationPlace').html('Apartment Number');
+                }
+            }
+            else
+            {
+                $('#locationPlaceContainer').hide();
+            }
+        }
+    </script>
+   </head>
+   <body>
+      <form method="post" action="./Cart.aspx" id="form1">
+         <header>
+            <div class="logo">
+               <a class="navbar-brand" href="index.html"><img alt="Palms" src="Includes/images/palmsgoSandybrown.png" /></a><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+            </div>
+            <nav class="navbar navbar-default navbar-fixed-top">
+               <div class="container-fluid">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                     <div class="col-md-8 col-md-offset-4 col-sm-9 col-sm-offset-3 myNavbar-center">
+                        <ul class="nav navbar-nav">
+                           <li><a href="index.html" title="Home">Home</a></li>
+                           <!-- add class="active" to make the page active -->
+                           <li><a href="MenuGrille.html" title="Palms Grille">Palms Grille</a></li>
+                           <li><a href="MenuPapa.html" title="Papa John's">Papa John's</a></li>
+                           <li><a href="Cart.html" title="Cart">Cart<span id="Item_Count" class="badge">2</span></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </nav>
+         </header>
+         <div class="aboveBackgroundImages">
+            <div class="container">
+               <div class="row" style="text-align: center;">
+                  <div class="order-summary">
+                      <div class="order-summary-info">
+                          Items: 2
+                      </div>
+                      <div class="order-summary-items ">
+                            <div class="front payment-item ">
+                                <img class="card-image" src="Includes/images/Menu Items/Papa Johns/PJ_PepperoniPizza.jpg" \>
+                            </div>
+                            <div class="front payment-item ">
+                                <img class="card-image" src="Includes/images/Menu Items/Papa Johns/PJ_CheesePizza.jpg" \>
+                            </div>
+                      </div>
+                      <div class="order-summary-info">
+                          Total Price: $19.98
+                      </div>
+                  </div>
+                  <div>
+                      <span id="lblError" class="Error"></span>
+                  </div>
+                  <input id="hidPaymentType" type="hidden" value="1" />
+
+            <div class="payment-options">
+                <div class="payment-options-section" style="border-width: 2px 2px 2px 2px;">
+                    <table>
+                        <tr>
+                            <td>Customer First Name:</td>
+                            <td><input id="txtFirstName" class="inputText" type="text" /></td>
+                        </tr>
+                        <tr>
+                            <td>Customer Last Name:</td>
+                            <td><input id="txtLastName" class="inputText" type="text" /></td>
+                        </tr>
+                        <tr>
+                            <td>Order Type:</td>
+                            <td>
+                                <select id="ddlDeliveryType" onchange="pickDeliveryType(this);" >
+                                    <option value="" selected="True" ></option>
+                                    <option value="PickUp"           >Pick Up</option>
+                                    <option value="Delivery"         >Delivery</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr id="deliveryLocationContainer" style="display: none">
+                            <td>Delivery Location:</td>
+                            <td>
+                                <select id="ddlLocations"  class="inputText"   onchange="pickLocation(this);" >
+                                    <option value=""                              ></option>
+                                    <option value="Palm's Grille" disabled="true" >Palm's Grille</option>
+                                    <option value="Campus House Lobby"            >Campus House Lobby</option>
+                                    <option value="Sports Center"                 >Sports Center</option>
+                                    <option value="DR"                            >Residence Hall Room</option>
+                                    <option value="WA"                            >Waveland Apartment</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr id="locationPlaceContainer" style="display: none">
+                            <td><span  id="lbllocationPlace"></span></td>
+                            <td><input id="txtLocationPlace" type="text" width="3em" /></td>
+                        </tr>
+                        <tr>
+                            <td>Time Wanted Today:</td>
+                            <td>
+                                <select id="ddlTimes"   onchange="" >
+                                    <option value="ASAP">ASAP</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+									
+            <div class="payment-options">
+                <table class="payment-options-button-container">
+                    <tr>
+                        <td class="payment-options-button" Tab="1" onclick="switchToTab('1');">Credit Card</td>
+                        <td class="payment-options-button" Tab="2" onclick="switchToTab('2');">PCC ID Card</td>
+                    </tr>
+                </table>
+                <div class="payment-options-section" tabSection="1">
+                    <table>
+                        <tr>
+                            <td>Credit Card Number:</td>
+                            <td class="help-tip">
+	                            <p>Must be 16 digits long.</p>
+                            </td>
+                            <td><input id="txtCreditCardNumber" type="text" class="inputText" placeholder="################" /></td>
+                        </tr>
+                        <tr>
+                            <td>Credit Card Security Code:</td>
+                            <td class="help-tip">
+	                            <p>Must be 3 or 4 digits long. The security code is found on the back of your credit card.</p>
+                            </td>
+                            <td><input id="txtCreditCardSecurityCode" type="text" class="inputText" placeholder="### or ####" /></td>
+                        </tr>
+                        <tr>
+                            <td>Credit Card Exp. Date:</td>
+                            <td class="help-tip">
+	                            <p>April 2017 would be 04/17.</p>
+                            </td>
+                            <td><input id="txtCreditCardExpDate" type="text" class="inputText" placeholder="##/##" /></td>
+                        </tr>
+                        <tr>
+                            <td>Credit Card Owner Name:</td>
+                            <td class="help-tip">
+	                            <p>First and last name.</p>
+                            </td>
+                            <td><input id="txtCreditCardOwnerName" type="text" class="inputText" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="payment-options-section" tabSection="2">
+                    <table>
+                        <tr>
+                            <td class="inputLabel">ID Number: </td>
+                            <td class="help-tip">
+	                            <p>Enter your 6 digit ID number.</p>
+                            </td>
+                            <td><input id="txtIDNumber" type="text" class="inputText" placeholder="######" /></td>
+                        </tr>
+                        <tr>
+                            <td class="inputLabel" id="password">Password:</td>
+                            <td class="help-tip">
+	                            <p>Enter your 8 digit password.</p>
+                            </td>
+                            <td><input id="txtPassword" type="password" class="inputText" placeholder="########" /></td>
+                        </tr>
+                    </table>
+                </div>
+                  <a id="Content_lnkBack" class="payment-submit-button" href="Cart.html">Back</a><span style="width:10px;">&nbsp;</span>
+                  <a id="Content_lnkGoPay" class="payment-submit-button" href="ThankYou.html">Submit</a>
+               </div>
+            </div>
+         </div>
+         <img alt="Palms Go" src="Includes/images/palmsgo_left.png" class="palmsgo_left img-responsive" />
+         <img alt="Palms Go" src="Includes/images/palmsgo_right.png" class="palmsgo_right img-responsive" />
+         <footer>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script type="text/javascript" src="Includes/scripts/bootstrap.min.js"></script><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+         </footer>
+      </form>
+   </body>
+</html>

@@ -1,0 +1,385 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+   <head>
+      <title>Cart</title>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="shortcut icon" href="Includes/images/palmsgoIcon.png" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="Includes/stylesheets/bootstrap.min.css" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="Includes/stylesheets/customStyle.css" />  <!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans" />
+      <link rel="stylesheet" type="text/css" href="Includes/stylesheets/CartStyles.css" />   <!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="Includes/stylesheets/CardStyles.css" />   <!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <link rel="stylesheet" type="text/css" href="Includes/stylesheets/DetailStyles.css" /> <!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+      <style type="text/css">
+         .payment-options-section {
+            border-width: 1px 2px 2px 2px;
+            border-style: solid;
+            border-color: gray;
+            padding: 20px 40px;
+            width: 100%;
+            text-align: left;
+            display: inline-block;
+         }
+      
+         .payment-options-section table {
+            width: 100%;
+         }
+      
+         .Error {
+            color: rgb(200, 25, 25);
+         }
+      
+         .bad-data {
+            border: 2px solid rgb(200, 25, 25);
+         }
+      
+         .ExclusiveGroupInstructions::before {
+            background-color: initial;
+         }
+      </style>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <script type="text/javascript">
+         $(document).ready(function ()
+         {
+            var currentDetail = "";
+            // have to clear currentDetail per each food in cart
+            $('div.row').each(function ()
+            {
+               $(this).find('.item-detail-list').show();
+               // hide/show details to the selected food (see global variable)
+               $(this).find('.item-detail-list input[type="checkbox"]').each(function ()
+               {
+                  var chb = $(this);
+                  var chbGroup = chb.siblings('input[id*="hidGroupName"]').val();
+                  if (chbGroup == "") // if this detail has no group
+                  {
+                     // Be normal
+                  }
+                  else
+                  {
+                     if (chbGroup.indexOf('X') != -1) // if this detail is an extra
+                     {
+                        // Be normal
+                        var id_of_parent_detail = chbGroup.substr(0, chbGroup.indexOf('X'));
+                        var chbParentchb = chb.parent().siblings().find('input[id*="hidDetailID"][value="' + id_of_parent_detail + '"]').first().siblings('input[type="checkbox"]');// the checkbox of the 'normal' relative to this extra chb.parent().addClass('sub-detail');
+                        if (!chbParentchb.prop('checked'))
+                        {
+                           chb.parent().hide();
+                        }
+                        chbParentchb.on('click', function ()
+                        {
+                           var id = $(this).siblings('input[id*="hidDetailID"]').val();
+                           var divOfextra = $(this).parent().siblings().find('input[id*="hidGroupName"][value^="' + id + 'X"]').first().parent();
+                           if ($(this).prop('checked'))
+                           {
+                              divOfextra.show();
+                           }
+                           else
+                           {
+                              divOfextra.hide();
+                              divOfextra.children('input[type="checkbox"]').prop('checked', '');
+                           }
+                        });
+                     }
+                     else if (chb.parent().siblings().find('input[id*="hidGroupName"][value="' + chbGroup + '"]').toArray().length > 0) // if there are others (not counting himself) in the same group
+                     {
+                        chb.on('click', function ()
+                        {
+                           if (!$(this).prop('checked'))
+                           {
+                              $(this).prop('checked', 'checked')
+                           }
+                           $(this).parent().siblings().find('input[id*="hidGroupName"][value="' + chbGroup + '"]').siblings('input[type="checkbox"]').prop('checked', '');
+                        });
+                     }
+                     else // if this is the only detail with that group
+                     {
+                        // Be normal
+                     }
+                  }
+               });
+               if ($(this).find('.item-detail-list').children(':not(div[style*="display: none;"])').toArray().length == 0)
+               {
+                  $(this).find('.item-detail-list').hide();
+               }
+               else
+               {
+                  // add separator line between and instruction for checkbox groups (checking the default/first of necessary groups)
+                  currentDetail = "";
+                  $(this).find('.item-detail-list').children(':not(div[style*="display: none;"])').each(function (index)
+                  {
+                     var group = $(this).find('input[id*="hidGroupName"]').first().val();
+                     // VVV set group instructions and remove all separators VVV
+                     if (!(group == null || group == "") && $(this).siblings(':not(div[style*="display: none;"])').find('input[id*="hidGroupName"][value*="' + group + '"]').toArray().length > 0)
+                     {
+                        var detailsInGroup = $('.item-detail-list').find(':not(div[style*="display: none;"]) input[id*="hidGroupName"][value*="' + group + '"]');
+                        var detailInGroupToCheck = detailsInGroup.first();
+                        // set group instructions
+                        detailInGroupToCheck.parent().addClass("ExclusiveGroupInstructions");
+                     }
+                     $(this).removeClass("BorderAboveDetail");
+                     // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     if (currentDetail == null || currentDetail == "")
+                     {
+                        if ($(this).siblings(':not(div[style*="display: none;"])').find('input[id*="hidGroupName"][value*="' + group + '"]').toArray().length > 0)
+                        {
+                           currentDetail = group;
+                           if (!(group == null || group == "") && index != 0)
+                           {
+                              $(this).addClass("BorderAboveDetail");
+                           }
+                        }
+                     }
+                     else if (currentDetail != group && group.indexOf("X") == -1)
+                     {
+                        $(this).addClass("BorderAboveDetail");
+                        currentDetail = group;
+                     }
+                  });
+               }
+            });
+
+            // validate delivery location
+            $('#Content_lnkGoPay').on('click', function ()
+            {
+               var isValid = true;
+               var txtLocationPlaceCheck = /^[0-9]{3,4}$/;
+               var ddlDeliveryType = $('#Content_ddlDeliveryType');
+               var ddlLocations = $('#Content_ddlLocations');
+               var locationPlaceContainer = $('#Content_locationPlaceContainer');
+               var txtLocationPlace = $('#Content_txtLocationPlace');
+               var lblError = $('#Content_lblError');
+               var lblError2 = $('#Content_lblError2');
+               lblError2.html("");
+               if (ddlDeliveryType.val() != "")
+               {
+                  ddlDeliveryType.removeClass("bad-data");
+               }
+               else
+               {
+                  ddlDeliveryType.addClass("bad-data");
+                  isValid = false;
+                  lblError2.html(lblError2.html() + "<br />Please choose Pick Up or Delivery.");
+               }
+               if (ddlLocations.val() != "")
+               {
+                  ddlLocations.removeClass("bad-data");
+               }
+               else
+               {
+                  ddlLocations.addClass("bad-data");
+                  isValid = false;
+                  lblError2.html(lblError2.html() + "<br />Please choose your delivery Location.");
+               }
+               if (locationPlaceContainer.is(':visible'))
+               {
+                  if (txtLocationPlaceCheck.test(txtLocationPlace.val()))
+                  {
+                     txtLocationPlace.removeClass("bad-data");
+                  }
+                  else
+                  {
+                     txtLocationPlace.addClass("bad-data");
+                     isValid = false;
+                     lblError2.html(lblError2.html() + "<br />Please give your Residence Hall Room/Waveland Apartment number.");
+                  }
+               }
+               if (!(isValid) || lblError.html().indexOf("cannot be delivered") != -1)
+               {
+                  $('body,html').animate({ scrollTop: 0 });
+               }
+               return isValid;// false stops postback
+            });
+         });
+      </script>
+      <script type="text/javascript">
+         function pickLocation(ddl)
+         {
+            var ddl = $(ddl);
+            if (ddl.val() != null && ddl.val() != '')
+            {
+               ddl.children().first().hide();
+            }
+            if (ddl.val() == 'DR' || ddl.val() == 'WA')
+            {
+               $('#Content_locationPlaceContainer').show();
+               $('#Content_txtLocationPlace').val('');
+               if (ddl.val() == 'DR')
+               {
+                  $('#Content_lbllocationPlace').html('Room Number');
+               }
+               else
+               {
+                  $('#Content_lbllocationPlace').html('Apartment Number');
+               }
+            }
+            else
+            {
+               $('#Content_locationPlaceContainer').hide();
+            }
+         }
+      </script>
+   </head>
+   <body>
+      <form method="post" action="./Cart.html" id="form1">
+         <header>
+            <div class="logo">
+               <a class="navbar-brand" href="index.html"><img alt="Palms" src="Includes/images/palmsgoSandybrown.png" /></a><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+            </div>
+            <nav class="navbar navbar-default navbar-fixed-top">
+               <div class="container-fluid">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                     <div class="col-md-8 col-md-offset-4 col-sm-9 col-sm-offset-3 myNavbar-center">
+                        <ul class="nav navbar-nav">
+                           <li><a href="index.html" title="Home">Home</a></li>
+                           <!-- add class="active" to make the page active -->
+                           <li><a href="MenuGrille.html" title="Palms Grille">Palms Grille</a></li>
+                           <li><a href="MenuPapa.html" title="Papa John's">Papa John's</a></li>
+                           <li><a href="Cart.html" title="Cart">Cart<span id="Item_Count" class="badge">2</span></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </nav>
+         </header>
+         <div class="aboveBackgroundImages">
+            <div class="container">
+               <div class="row" style="text-align: center;">
+                  <div class="col-lg-12" style="margin-bottom: 35px; margin-top: 40px; "> The Cart allows you to modify your food how you like. When you are done, click Pay at the bottom to proceed. </div>
+                  <div>
+                     <span id="Content_lblError" class="Error"></span><span id="Content_lblError2" class="Error"></span>
+                  </div>
+                  <div class="payment-options-section" style="border-width: 2px 2px 2px 2px; background-color: sandybrown;">
+                     <table>
+                        <tr>
+                           <td>
+                              Order Type: <select name="ctl00$Content$ddlDeliveryType" onchange="javascript: if (this.value == 'Delivery') { document.getElementById('Content_locationPlaceContainer').style.display = 'block'; } else { document.getElementById('Content_locationPlaceContainer').style.display = 'none'; }" id="Content_ddlDeliveryType">
+                                 <option selected="selected" value=""></option>
+                                 <option value="PickUp">Pick Up</option>
+                                 <option value="Delivery">Delivery</option>
+                              </select>
+                           </td>
+                           <td id="Content_locationPlaceContainer" style="display:none;">
+                              <span id="Content_lbllocationPlace">Residence Hall Room/Waveland Apartment number:</span>
+                              <input name="ctl00$Content$txtLocationPlace" type="text" id="Content_txtLocationPlace" style="width:3em;" />
+                           </td>
+                           <td> Total Price: $19.98 </td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-12 cart-item">
+                     <div class="front card-front ">
+                        <img class="card-image" src="Includes/images/Menu Items/Papa Johns/PJ_PepperoniPizza.jpg" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+                     </div>
+                     <span id="Content_rptItems_litFoodName_0" class="food-name">Pepperoni:</span>
+                     <span id="Content_rptItems_lblDescription_0">Premium Pepperoni.</span>
+                     <img alt="deliverable" src="Includes/images/delivery/inverted_delivery_icon.png" style="float: right;" title="Deliverable" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+                     <span id="Content_rptItems_lblfrontprice_0" class="food-cost">$9.99</span>
+                     <input type="hidden" name="ctl00$Content$rptItems$ctl00$hid1" id="Content_rptItems_hid1_0" value="Y" />
+                     <br />
+                     <div class="item-detail-list">
+                        <div id="Content_rptItems_rptDetails_0_pnlDetail_0">
+                           <input id="Content_rptItems_rptDetails_0_chbAdded_0" type="checkbox" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl00$chbAdded" checked="checked" /><label for="Content_rptItems_rptDetails_0_chbAdded_0">Thin Crust</label>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl00$hidGroupName" id="Content_rptItems_rptDetails_0_hidGroupName_0" value="cru" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl00$hidDetailID" id="Content_rptItems_rptDetails_0_hidDetailID_0" value="51" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_0_pnlDetail_1">
+                           <input id="Content_rptItems_rptDetails_0_chbAdded_1" type="checkbox" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl01$chbAdded" /><label for="Content_rptItems_rptDetails_0_chbAdded_1">Pan Crust</label>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl01$hidGroupName" id="Content_rptItems_rptDetails_0_hidGroupName_1" value="cru" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl01$hidDetailID" id="Content_rptItems_rptDetails_0_hidDetailID_1" value="77" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_0_pnlDetail_2">
+                           <input id="Content_rptItems_rptDetails_0_chbAdded_2" type="checkbox" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl02$chbAdded" /><label for="Content_rptItems_rptDetails_0_chbAdded_2">Stuffed Crust</label>
+                           <span id="Content_rptItems_rptDetails_0_lblcost_2">$1.00</span>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl02$hidGroupName" id="Content_rptItems_rptDetails_0_hidGroupName_2" value="cru" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl02$hidDetailID" id="Content_rptItems_rptDetails_0_hidDetailID_2" value="191" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_0_pnlDetail_3">
+                           <input id="Content_rptItems_rptDetails_0_chbAdded_3" type="checkbox" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl03$chbAdded" /><label for="Content_rptItems_rptDetails_0_chbAdded_3">8"</label>
+                           <span id="Content_rptItems_rptDetails_0_lblcost_3">-$5.00</span>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl03$hidGroupName" id="Content_rptItems_rptDetails_0_hidGroupName_3" value="size" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl03$hidDetailID" id="Content_rptItems_rptDetails_0_hidDetailID_3" value="175" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_0_pnlDetail_4">
+                           <input id="Content_rptItems_rptDetails_0_chbAdded_4" type="checkbox" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl04$chbAdded" checked="checked" /><label for="Content_rptItems_rptDetails_0_chbAdded_4">16"</label>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl04$hidGroupName" id="Content_rptItems_rptDetails_0_hidGroupName_4" value="size" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl00$rptDetails$ctl04$hidDetailID" id="Content_rptItems_rptDetails_0_hidDetailID_4" value="176" />
+                        </div>
+                     </div>
+                     <a id="Content_rptItems_lnkRemoveItem_0" class="remove-button" href="" style="min-width:55px;min-height:35px;">Remove</a>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-12 cart-item">
+                     <div class="front card-front ">
+                        <img class="card-image" src="Includes/images/Menu Items/Papa Johns/PJ_CheesePizza.jpg" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+                     </div>
+                     <span id="Content_rptItems_litFoodName_1" class="food-name">Cheese:</span>
+                     <span id="Content_rptItems_lblDescription_1">Signature Mozerella Cheese.</span>
+                     <img alt="deliverable" src="Includes/images/delivery/inverted_delivery_icon.png" style="float: right;" title="Deliverable" /><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+                     <span id="Content_rptItems_lblfrontprice_1" class="food-cost">$9.99</span>
+                     <input type="hidden" name="ctl00$Content$rptItems$ctl01$hid1" id="Content_rptItems_hid1_1" value="Y" />
+                     <br />
+                     <div class="item-detail-list">
+                        <div id="Content_rptItems_rptDetails_1_pnlDetail_0">
+                           <input id="Content_rptItems_rptDetails_1_chbAdded_0" type="checkbox" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl00$chbAdded" checked="checked" /><label for="Content_rptItems_rptDetails_1_chbAdded_0">Thin Crust</label>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl00$hidGroupName" id="Content_rptItems_rptDetails_1_hidGroupName_0" value="cru" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl00$hidDetailID" id="Content_rptItems_rptDetails_1_hidDetailID_0" value="51" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_1_pnlDetail_1">
+                           <input id="Content_rptItems_rptDetails_1_chbAdded_1" type="checkbox" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl01$chbAdded" /><label for="Content_rptItems_rptDetails_1_chbAdded_1">Pan Crust</label>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl01$hidGroupName" id="Content_rptItems_rptDetails_1_hidGroupName_1" value="cru" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl01$hidDetailID" id="Content_rptItems_rptDetails_1_hidDetailID_1" value="77" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_1_pnlDetail_2">
+                           <input id="Content_rptItems_rptDetails_1_chbAdded_2" type="checkbox" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl02$chbAdded" /><label for="Content_rptItems_rptDetails_1_chbAdded_2">Stuffed Crust</label>
+                           <span id="Content_rptItems_rptDetails_1_lblcost_2">$1.00</span>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl02$hidGroupName" id="Content_rptItems_rptDetails_1_hidGroupName_2" value="cru" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl02$hidDetailID" id="Content_rptItems_rptDetails_1_hidDetailID_2" value="191" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_1_pnlDetail_3">
+                           <input id="Content_rptItems_rptDetails_1_chbAdded_3" type="checkbox" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl03$chbAdded" /><label for="Content_rptItems_rptDetails_1_chbAdded_3">8"</label>
+                           <span id="Content_rptItems_rptDetails_1_lblcost_3">-$5.00</span>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl03$hidGroupName" id="Content_rptItems_rptDetails_1_hidGroupName_3" value="size" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl03$hidDetailID" id="Content_rptItems_rptDetails_1_hidDetailID_3" value="175" />
+                        </div>
+                        <div id="Content_rptItems_rptDetails_1_pnlDetail_4">
+                           <input id="Content_rptItems_rptDetails_1_chbAdded_4" type="checkbox" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl04$chbAdded" checked="checked" /><label for="Content_rptItems_rptDetails_1_chbAdded_4">16"</label>
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl04$hidGroupName" id="Content_rptItems_rptDetails_1_hidGroupName_4" value="size" />
+                           <input type="hidden" name="ctl00$Content$rptItems$ctl01$rptDetails$ctl04$hidDetailID" id="Content_rptItems_rptDetails_1_hidDetailID_4" value="176" />
+                        </div>
+                     </div>
+                     <a id="Content_rptItems_lnkRemoveItem_1" class="remove-button" href="" style="min-width:55px;min-height:35px;">Remove</a>
+                  </div>
+               </div>
+               <div class="row" style="text-align: center;">
+                  <a id="Content_lnkBack" class="payment-submit-button" href="MenuGrille.html">Back</a><span style="width:10px;">&nbsp;</span>
+                  <a id="Content_lnkGoPay" class="payment-submit-button" href="Payment.html">Pay</a>
+               </div>
+            </div>
+         </div>
+         <img alt="Palms Go" src="Includes/images/palmsgo_left.png" class="palmsgo_left img-responsive" />
+         <img alt="Palms Go" src="Includes/images/palmsgo_right.png" class="palmsgo_right img-responsive" />
+         <footer>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script type="text/javascript" src="Includes/scripts/bootstrap.min.js"></script><!--http://csmain.studentnet.int/seproject/PalmsPP/-->
+         </footer>
+      </form>
+   </body>
+</html>

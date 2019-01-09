@@ -1,0 +1,148 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>Bump Board</title>
+<link rel="shortcut icon" href="http://csmain.studentnet.int/seproject/PalmsPP/Includes/images/palmsgoIcon.png""/>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="http://csmain.studentnet.int/seproject/PalmsPP/Includes/stylesheets/Bump_Board.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript"> var numInterval = 0;
+$(document).ready(function () { $(document).focus();
+$('div[class*="window_button"]').on('click', function () { //get the button number var window_num = parseInt($(this).attr('id').replace('#', ''));
+//refresh the orders for it get_orders(window_num);
+//change which one is focused if necessary $('div[class*="window_button"]').each(function () { $(this).removeClass("focused_window_button");
+});
+$("#" + window_num.toString()).addClass("focused_window_button");
+});
+setInterval(function () //there can be only one interval which is replaced by any following calls to setInterval() { document.getElementById("time").innerHTML = (new Date()).toLocaleTimeString();
+if (numInterval >= 3) { //get the button number and refresh the orders for it get_orders(parseInt($('div[class*="focused_window_button"]').first().attr('id').replace('#', '')));
+numInterval = 0;
+} numInterval = numInterval + 1;
+}, 1000);
+});
+$(document).on('keypress', function (e) { //get the button number var window_number = parseInt($('div[class*="focused_window_button"]').first().attr('id').replace('#', ''));
+var code = (e.keyCode | e.which);
+// bitwise OR if (window_number == 1)//only 'Front Window' for now { if (code >= 49 && code <= 56) { //$('input[order_id]').each(function (index, box) //{ // if ((index + 1) == (code - 48)) //match box on screen to keypad number // { var id = $($('input[order_id]').toArray()[code - 49]).attr("order_id");
+if (id != "") { $.ajax({ type: "POST", url: "BumpBoard.aspx/bump_order", contentType: "application/json;
+charset=utf-8", data: '{"order_id":' + id + '}', dataType: "json", success: function (result) { $(document).focus();
+get_orders(window_number);
+}, error: function (XMLHttpRequest, textStatus, errorThrown) { alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+} });
+} // } //});
+} } });
+function get_orders(window_display) { var boundary = 8;
+$.ajax({ type: "POST", url: "BumpBoard.aspx/get_more_orders", contentType: "application/json;
+charset=utf-8", data: '{"order_number_boundary":' + boundary + ', "window_number": ' + window_display + '}', dataType: "json", success: function (result) { $("#middle").html(result.d);
+}, error: function (XMLHttpRequest, textStatus, errorThrown) { alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+} });
+} </script>
+</head>
+<body>
+<form method="post" action="./BumpBoard.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg1NzM2ODM2MA9kFgJmD2QWAgIDD2QWAmYPZBYCAgEPFgIeBFRleHQF4B48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjE8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjI8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjM8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjQ8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjU8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjY8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjc8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvcmRlckJveCI+PGRpdiBjbGFzcz0ib3JkZXJCb3hFbGVtZW50Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im9yZGVyX2luZm8iIG9yZGVyLWlkPSIiID4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iaGlkMSIgb3JkZXJfaWQ9JycgLz4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBpZD0iYm94MSIgY2xhc3M9ImJveF9udW1iZXIiPjg8L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im9yZGVyX2xpbmUiPjwvc3Bhbj4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ib3JkZXJfbGluZSI+PC9zcGFuPg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJvcmRlcl9saW5lIj48L3NwYW4+DQogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj48L2Rpdj48L2Rpdj5kZIQo0FtnWSdNcIZWiNdIOvIH+m1LwL7j8XSzb/0HP36v" />
+</div>
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9253DFBB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAk/TDAqLmMfVqqCRI+WLfa6wVc/PSuXic0s0LYcW1MpTBBMGJb73eXx4/mUt/v5Q47PFvOyq77bZk+Ah+lz8/VUZa3ofj1+hkAjg6gg2pqEg5EOgRkve85VIS9i+ytQlXQD0v2s6mxcp6zV9msnacOpKMRLY/0Jsdz9vbREPbDu2LGId6CB1rFxDAsG6KzMyrU9T7tass4zhAGchJsDDxC2BGtPaafw/ep9x+0ghsXLoA==" />
+</div>
+<header>
+</header>
+<div>
+<div class="order_display">
+<div class="top">
+<div id="1" class="window_button focused_window_button">Front Window</div>
+<div id="2" class="window_button">Back Window</div>
+<div id="3" class="window_button">Ice Cream</div>
+<div id="4" class="window_button">Frier</div>
+<div id="5" class="window_button">Salad</div>
+<div id="6" class="window_button">Pizza</div>
+<div class="bar">PG - Front Video 8</div>
+</div>
+<div id="middle" class="middle">
+<div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">1</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div><div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">2</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div><div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">3</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div><div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">4</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div><div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">5</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div><div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">6</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div><div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">7</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div><div class="orderBox"><div class="orderBoxElement">
+<div class="order_info" order-id="" >
+<input type="hidden" id="hid1" order_id='' />
+<span id="box1" class="box_number">8</span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+<span class="order_line"></span>
+</div></div></div>
+</div>
+<div class="bottom">
+<div style="float: left;">BT 10.19.33.21</div>
+<div style="display: inline-block;">
+<input type="button" name="ctl00$Content$clear" value="Clear" id="Content_clear" disabled="disabled" class="aspNetDisabled base_bar" />
+<input type="button" name="ctl00$Content$park" value="Park" id="Content_park" disabled="disabled" class="aspNetDisabled base_bar grey" />
+<input type="button" name="ctl00$Content$sum" value="Sum" id="Content_sum" disabled="disabled" class="aspNetDisabled base_bar" />
+<input type="button" name="ctl00$Content$recall" value="Recall" id="Content_recall" disabled="disabled" class="aspNetDisabled base_bar" />
+<input type="button" name="ctl00$Content$esc" value="Esc" id="Content_esc" disabled="disabled" class="aspNetDisabled base_bar grey" />
+<input type="button" name="ctl00$Content$refresh" value="Refresh" id="Content_refresh" disabled="disabled" class="aspNetDisabled base_bar" />
+<input type="button" name="ctl00$Content$funct" value="Funct" id="Content_funct" disabled="disabled" class="aspNetDisabled base_bar" />
+<input type="button" name="ctl00$Content$help" value="Help" id="Content_help" disabled="disabled" class="aspNetDisabled base_bar red" />
+</div>
+<div id="func"><span id="time"></span></div>
+</div>
+</div>
+</div>
+<footer>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://csmain.studentnet.int/seproject/PalmsPP/bootstrap/js/bootstrap.min.js"></script>
+</footer>
+</form>
+</body>
+</html>
